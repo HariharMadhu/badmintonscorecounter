@@ -1,6 +1,6 @@
 # 🏸 Pro Badminton Scorer
 
-A premium, modern badminton scoring application built entirely using **Google Antigravity** and **Gemini**. This project demonstrates the power of "Vibe Coding" — creating functional, aesthetically pleasing web applications through natural language conversation with AI.
+A premium, modern badminton scoring application built entirely using **Google Antigravity** and **Gemini**. This project demonstrates the power of "Vibe Coding" — creating functional, aesthetically pleasing web applications through natural language conversation with AI. Of course I had to steer a couple of times when it went wrong or broke some features, which goes to show it isnt completely perfect, but gets the job done without me writing a single line of code. 
 
 ## 🚀 How it Works
 
@@ -32,4 +32,4 @@ The development process involved:
 
 ---
 
-*This project is a testament to the future of software development, where ideas are turned into reality through the collaboration of human intent and AI execution.*
+*This is a marvel how AI can turn simple or even complex ideas into a reality. The limit is just your imagination.*
