@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Badminton Scorer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Setup Screen -->
+        <section id="setup-screen" class="screen active">
+            <div class="setup-layout">
+                <div class="glass-card">
+                    <h1>Badminton Scorer</h1>
+                    <p class="subtitle">Enter player names to begin the match</p>
+                    <div class="input-group">
+                        <div class="field">
+                            <label for="p1-name">Player 1</label>
+                            <input type="text" id="p1-name" placeholder="Name" autocomplete="off">
+                        </div>
+                        <div class="divider">VS</div>
+                        <div class="field">
+                            <label for="p2-name">Player 2</label>
+                            <input type="text" id="p2-name" placeholder="Name" autocomplete="off">
+                        </div>
+                    </div>
+                    <button id="start-btn" class="primary-btn">Start Match</button>
+                    <button id="random-serve-btn" class="primary-btn" style="margin-top:10px;">Randomize Server</button>
+                </div>
+
+                <div class="history-card glass-card">
+                    <h3>Match History</h3>
+                    <div class="win-stats" id="win-stats">
+                        <!-- Stats will appear here -->
+                        <div class="stat-placeholder">No matches played yet</div>
+                    </div>
+                    <ul class="history-list" id="match-history">
+                        <!-- History items will appear here -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Screen -->
+        <section id="game-screen" class="screen">
+            <div class="match-header">
+                <button id="back-btn" class="icon-btn" title="Reset Match">↺</button>
+                <div class="match-info">Badminton Match</div>
+                <div id="undo-btn" class="icon-btn" title="Undo Last Point">⎌</div>
+            </div>
+
+            <div class="score-board">
+                <div class="player-panel p1" id="p1-panel" onclick="addPoint(1)" style="cursor:pointer;">
+                    <div class="player-name" id="p1-display-name">Player 1</div>
+                    <div class="score" id="p1-score">0</div>
+
+                    <div class="serve-indicator">SERVE</div>
+                </div>
+
+                <div class="player-panel p2" id="p2-panel" onclick="addPoint(2)" style="cursor:pointer;">
+                    <div class="player-name" id="p2-display-name">Player 2</div>
+                    <div class="score" id="p2-score">0</div>
+
+                    <div class="serve-indicator">SERVE</div>
+                </div>
+            </div>
+
+            <div class="game-status" id="game-status">First to 21</div>
+        </section>
+
+        <!-- Winner Screen -->
+        <section id="winner-screen" class="screen">
+            <div class="glass-card winner-card">
+                <div class="trophy">🏆</div>
+                <h2 id="winner-text">Player 1 Wins!</h2>
+                <div class="final-score" id="final-score-display">21 - 18</div>
+                <button id="rematch-btn" class="primary-btn">New Match</button>
+                <button id="winner-undo-btn" class="primary-btn" style="background: var(--card-bg); color: var(--text-main); border: 1px solid var(--glass-border); margin-top: 10px;">Undo Last Point</button>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
